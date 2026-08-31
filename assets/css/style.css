@@ -1,0 +1,325 @@
+/* ============================================================
+   Pascual-Caballo — sitio académico personal
+   Estilo: académico minimalista
+   ============================================================ */
+
+:root {
+  --color-bg: #fbfaf7;
+  --color-bg-alt: #f3f1ea;
+  --color-text: #23211d;
+  --color-text-muted: #5c584f;
+  --color-accent: #7a1f2b;      /* granate académico */
+  --color-accent-dark: #591620;
+  --color-border: #ddd8cb;
+  --color-link: #7a1f2b;
+  --font-serif: "Source Serif 4", "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --max-width: 780px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; }
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover { border-bottom-color: currentColor; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / nav ---------- */
+
+header.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+.site-title span {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+nav.site-nav a {
+  color: var(--color-text-muted);
+  border-bottom: none;
+  padding-bottom: 2px;
+}
+nav.site-nav a:hover,
+nav.site-nav a.active {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* ---------- Main sections ---------- */
+
+main { padding-top: 48px; padding-bottom: 64px; }
+
+.hero {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(89, 22, 32, 0.18);
+}
+
+.hero-text { flex: 1; min-width: 260px; }
+
+.hero h1 {
+  margin: 0 0 6px;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.hero .role {
+  font-family: var(--font-sans);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin: 0 0 14px;
+}
+
+.hero .affiliation {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+h2.section-title {
+  font-size: 1.05rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+  margin: 0 0 22px;
+}
+
+section { margin-bottom: 52px; }
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+/* ---------- Cards / lists ---------- */
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+  border-radius: 6px;
+  padding: 18px 20px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.card .meta {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.card .links {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+.card .links a { margin-right: 14px; }
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(122, 31, 43, 0.09);
+  color: var(--color-accent);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin: 0 6px 6px 0;
+}
+
+/* ---------- Publications ---------- */
+
+.pub-year {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin: 34px 0 12px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+.pub-year:first-child { margin-top: 0; }
+
+/* ---------- CV ---------- */
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.cv-entry .period {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  padding-top: 3px;
+}
+.cv-entry .detail h3 {
+  margin: 0 0 4px;
+  font-size: 1.02rem;
+}
+.cv-entry .detail p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-bottom: none;
+}
+.btn:hover { background: var(--color-accent-dark); border-bottom: none; }
+
+/* ---------- Contact ---------- */
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-sans);
+}
+.contact-list li {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.contact-list .label {
+  width: 130px;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 28px 0 60px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  body { font-size: 16.5px; }
+  .hero { flex-direction: column; text-align: center; }
+  .hero-text { min-width: 0; }
+  nav.site-nav ul { gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .cv-entry { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* ---------- Dark mode ---------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1b1a17;
+    --color-bg-alt: #242320;
+    --color-text: #e9e6dd;
+    --color-text-muted: #a9a496;
+    --color-accent: #d98b95;
+    --color-accent-dark: #e9a6ae;
+    --color-border: #3a382f;
+    --color-link: #d98b95;
+  }
+  .avatar { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); }
+  .btn { color: #1b1a17; }
+}
