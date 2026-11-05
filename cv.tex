@@ -1,0 +1,205 @@
+% --- LaTeX CV Template - S. Venkatraman ---
+
+% --- Set document class and font size ---
+
+\documentclass[letterpaper, 11pt]{article}
+
+% --- Package imports ---
+
+\usepackage{hyperref, enumitem, longtable, amsmath, array}
+
+% --- Page layout settings ---
+
+% Set page margins
+\usepackage[left=0.7in, right=0.8in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.1}
+
+% --- Page formatting settings ---
+
+\usepackage{url}
+
+% Set link colors
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{colorlinks=true, linkcolor=MidnightBlue, urlcolor=MidnightBlue}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+\pagenumbering{gobble}
+\definecolor{blood}{RGB}{138,3,3}
+% Define font size and color for section headings
+\newcommand{\headingfont}{\Large\color{blood}}
+
+% Note: each section of this table (Education, Awards, Publications etc.) is 
+% stored in a two-column table. The left-hand column is narrow (1 inch) and is 
+% meant to store dates. The right-hand column is wide (5.2 inches) and stores 
+% the main text.  Sections in which each entry might have multiple lines 
+% (e.g., Education) are stored in a 'SectionTable' environment). Sections in 
+% which each entry might just have one line are stored in a 'SectionTableSingleSpace'
+% environment. The only difference between the two environments is the line 
+% spacing between each entry. Both environments take one argument, which is the
+% title of the section. See main document for how these environments are used.
+
+% Define settings for left-hand column in which dates are printed
+\newcolumntype{R}{>{\raggedleft}p{1in}}
+
+\newenvironment{SectionTable}[1]{
+    \renewcommand*{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{10pt}
+    \begin{longtable}{R p{\dimexpr\textwidth-1in-2\tabcolsep\relax}} & #1 \\*}
+{\end{longtable}\vspace{-.3cm}}
+
+\newenvironment{SectionTableSingleSpace}[1]{
+    \renewcommand*{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{10pt}
+    \begin{longtable}{R p{\dimexpr\textwidth-1in-2\tabcolsep\relax}} & #1 \\*[0.6em]}
+{\end{longtable}\vspace{-.3cm}}
+
+% --- Document starts here ---
+
+
+\begin{document}
+
+\begin{SectionTable}{\textcolor{blood}{\Huge Miguel M. G. Pascual-Caballo}} &
+miguel.martinez [at] icmat.es $\ \boldsymbol{\cdot}\ $
+\href{https://miguelmgpascualcaballo.github.io/}{miguelmgpascualcaballo.github.io} $\ \boldsymbol{\cdot}\ $
+Citizenship: Spain
+\end{SectionTable}
+
+% --- Summary ---
+
+\begin{SectionTable}{\headingfont Summary}
+&PhD student in Fluid Dynamics at ICMAT. My research focuses on the analysis of existence and instability of solutions to partial differential equations in fluid dynamics, using analytical and computer-assisted techniques.
+\end{SectionTable}
+
+% --- Research interests ---
+
+%\begin{SectionTable}{\headingfont Research interests}
+%&Fluid dynamics, applied mathematics, [specific topic], differential geometry, algebraic topology, harmonic analysis
+%\end{SectionTable}
+
+% --- Education ---
+
+\begin{SectionTable}{\headingfont Education}
+
+2022 -- present & 
+\textbf{Instituto de Ciencias Matemáticas (ICMAT)} -- Madrid, Spain \newline
+PhD in Mathematics (Fluid dynamics), Universidad Autónoma de Madrid (UAM) \newline
+Advisor: Ángel Castro
+\\
+
+2021 -- 2022 & 
+\textbf{Universidad Complutense de Madrid} -- Madrid, Spain \newline
+Master in Mathematics (Matemáticas Avanzadas) %(9.39) \newline
+Master's thesis: De Rham theorems in cohomology of manifolds %(9.5)
+\\
+
+2017 -- 2021 & 
+\textbf{Universidad Complutense de Madrid} -- Madrid, Spain \newline
+Bachelor in Mathematics% (8.27) \newline 
+Bachelor's thesis: Geometric mechanics of the rigid body %(9.1)
+\\
+
+\end{SectionTable}
+
+% --- Research visits ---
+
+\begin{SectionTable}{\headingfont Research visits}
+
+2025 & 
+\textbf{Brown University} -- Providence, RI, USA \newline
+Visiting researcher (3 months), hosted by Javier Gómez-Serrano
+
+
+\end{SectionTable}
+
+% --- Publications ---
+
+\begin{SectionTable}{\headingfont Publications}
+
+
+2026 & 
+Á. Castro, J. Gómez-Serrano, and M. M. G. Pascual-Caballo. \textit{Linear instability of a Burgers--Hilbert traveling wave}. Preprint, \href{https://arxiv.org/abs/2605.03920}{arXiv:2605.03920}
+\\
+2025 & 
+M. M. G. Pascual-Caballo. \textit{Stationary homogeneous solutions for the inviscid SQG equation}. Preprint, \href{https://arxiv.org/abs/2510.03108}{arXiv:2510.03108}
+
+
+
+\end{SectionTable}
+
+% --- Talks ---
+
+\begin{SectionTable}{\headingfont Talks}
+2026 &
+\textbf{Linear instability of a Burgers--Hilbert traveling wave} \newline
+8th BYMAT Conference, Santiago de Compostela, Galicia, Spain \\
+
+2026 &
+\textbf{Linear instability of a Burgers--Hilbert traveling wave} \newline
+Partial Differential Equations and Applications Seminar, IME-USP, São Paulo, Brazil \\
+
+2025 &
+\textbf{A Brief Introduction to Computer-Assisted Techniques in Analysis} \newline
+BYMAT, Sevilla, Spain \\
+
+2024 & 
+\textbf{Linearization and Stability in Fluid Dynamics} \newline
+BYMAT, Valladolid, Spain \\
+
+2023 & 
+\textbf{Compactness: Geometry and Topology} \newline
+Junior Colloquium (PhD student seminar), Universidad Autónoma de Madrid \\
+
+\end{SectionTable}
+
+% --- Teaching ---
+
+\begin{SectionTable}{\headingfont Teaching}
+
+2024 -- 2025 & 
+Teaching assistant, Mathematics I (Biomedical Engineering) \newline
+Universidad Autónoma de Madrid \\
+
+2024 -- 2025 & 
+Teaching assistant, Algebra (Computer Engineering) \newline
+Universidad Autónoma de Madrid \\
+
+2023 -- 2024 & 
+Teaching assistant, Calculus II \newline
+Universidad Autónoma de Madrid \\
+
+\end{SectionTable}
+
+% --- Technical skills ---
+
+\begin{SectionTable}{\headingfont Technical skills}
+
+& \textbf{Programming} \newline
+Python (SageMath) \\
+
+& \textbf{Mathematical software} \newline
+MATLAB, Mathematica \\
+
+& \textbf{Languages} \newline
+English (Advanced)
+
+\end{SectionTable}
+
+
+% --- Honors ---
+
+\begin{SectionTableSingleSpace}{\headingfont Honors and scholarships}
+
+2022 & JAE Summer School, ICMAT \\
+2017 & Bronze Medal, Spanish Mathematical Olympiad
+
+\end{SectionTableSingleSpace}
+
+
+
+\end{document}
