@@ -11,7 +11,7 @@
 % --- Page layout settings ---
 
 % Set page margins
-\usepackage[left=0.7in, right=0.8in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
+\usepackage[left=0.7in, right=1.0in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
 
 % Set line spacing
 \renewcommand{\baselinestretch}{1.1}
@@ -50,13 +50,13 @@
 \newenvironment{SectionTable}[1]{
     \renewcommand*{\arraystretch}{1.5}
     \setlength{\tabcolsep}{10pt}
-    \begin{longtable}{R p{\dimexpr\textwidth-1in-2\tabcolsep\relax}} & #1 \\*}
+    \begin{longtable}{R p{\dimexpr\textwidth-1in-4\tabcolsep\relax}} & #1 \\*}
 {\end{longtable}\vspace{-.3cm}}
 
 \newenvironment{SectionTableSingleSpace}[1]{
     \renewcommand*{\arraystretch}{1.2}
     \setlength{\tabcolsep}{10pt}
-    \begin{longtable}{R p{\dimexpr\textwidth-1in-2\tabcolsep\relax}} & #1 \\*[0.6em]}
+    \begin{longtable}{R p{\dimexpr\textwidth-1in-4\tabcolsep\relax}} & #1 \\*[0.6em]}
 {\end{longtable}\vspace{-.3cm}}
 
 % --- Document starts here ---
@@ -89,6 +89,7 @@ Citizenship: Spain
 2022 -- present & 
 \textbf{Instituto de Ciencias Matemáticas (ICMAT)} -- Madrid, Spain \newline
 PhD in Mathematics (Fluid dynamics), Universidad Autónoma de Madrid (UAM) \newline
+Thesis: \textit{Stability analysis and special solutions in fluid mechanics models} \newline
 Advisor: Ángel Castro
 \\
 
