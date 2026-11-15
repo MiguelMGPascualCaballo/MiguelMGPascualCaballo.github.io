@@ -18,7 +18,7 @@
 
 % --- Page formatting settings ---
 
-\usepackage{url}
+\usepackage{url,graphicx}
 
 % Set link colors
 \usepackage[dvipsnames]{xcolor}
@@ -48,7 +48,7 @@
 \newcolumntype{R}{>{\raggedleft}p{1in}}
 
 \newenvironment{SectionTable}[1]{
-    \renewcommand*{\arraystretch}{1.5}
+    \renewcommand*{\arraystretch}{1.3}
     \setlength{\tabcolsep}{10pt}
     \begin{longtable}{R p{\dimexpr\textwidth-1in-4\tabcolsep\relax}} & #1 \\*}
 {\end{longtable}\vspace{-.3cm}}
@@ -65,9 +65,7 @@
 \begin{document}
 
 \begin{SectionTable}{\textcolor{blood}{\Huge Miguel M. G. Pascual-Caballo}} &
-miguel.martinez [at] icmat.es $\ \boldsymbol{\cdot}\ $
-\href{https://miguelmgpascualcaballo.github.io/}{miguelmgpascualcaballo.github.io} $\ \boldsymbol{\cdot}\ $
-Citizenship: Spain
+\resizebox{\linewidth}{!}{miguel.martinez [at] icmat.es $\ \boldsymbol{\cdot}\ $ \href{https://miguelmgpascualcaballo.github.io/}{miguelmgpascualcaballo.github.io} $\ \boldsymbol{\cdot}\ $ Citizenship: Spain}
 \end{SectionTable}
 
 % --- Summary ---
@@ -142,23 +140,23 @@ M. M. G. Pascual-Caballo. \textit{Stationary homogeneous solutions for the invis
 \begin{SectionTable}{\headingfont Talks}
 2026 &
 \textbf{Linear instability of a Burgers--Hilbert traveling wave} \newline
-8th BYMAT Conference: Bringing Young Mathematicians Together, Santiago de Compostela, Galicia, Spain \\
+8th BYMAT Conference: Bringing Young Mathematicians Together \newline Santiago de Compostela, Galicia, Spain \\
 
 2026 &
 \textbf{Linear instability of a Burgers--Hilbert traveling wave} \newline
-Partial Differential Equations and Applications Seminar, IME-USP, São Paulo, Brazil \\
+Partial Differential Equations and Applications Seminar, IME-USP \newline São Paulo, Brazil \\
 
 2025 &
 \textbf{A Brief Introduction to Computer-Assisted Techniques in Analysis} \newline
-7th BYMAT Conference: Bringing Young Mathematicians Together, Sevilla, Spain \\
+7th BYMAT Conference: Bringing Young Mathematicians Together \newline Sevilla, Spain \\
 
 2024 & 
 \textbf{Linearization and Stability in Fluid Dynamics} \newline
-6th BYMAT Conference: Bringing Young Mathematicians Together, Valladolid, Spain \\
+6th BYMAT Conference: Bringing Young Mathematicians Together \newline Valladolid, Spain \\
 
 2023 & 
 \textbf{Compactness: Geometry and Topology} \newline
-Junior Colloquium (PhD student seminar), Universidad Autónoma de Madrid \\
+Junior Colloquium (PhD student seminar), Universidad Autónoma de Madrid \newline Madrid, Spain \\
 
 \end{SectionTable}
 
